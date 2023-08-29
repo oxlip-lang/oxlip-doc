@@ -4,6 +4,8 @@ title: "Hello world"
 nav_order: 5
 ---
 
+# Hello World
+
 Copy and paste the following line into a file named `hello.oal`:
 
 ```oal
@@ -16,7 +18,7 @@ Run the OAL compiler:
 oal-cli -m ./hello.oal -t hello.yaml
 ```
 
-Here is the OpenAPI definition generated and saved as `hello.yaml`:
+The corresponding OpenAPI definition is generated as `hello.yaml`:
 
 ```yaml
 openapi: 3.0.3
