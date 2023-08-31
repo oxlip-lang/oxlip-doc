@@ -2,7 +2,7 @@ title: Oxlip API Language
 email: info@oxlip-lang.org
 description: >-
   Documentation for the Oxlip API language.
-baseurl: "/oxlip-doc"
+baseurl: ""
 url: "https://www.oxlip-lang.org"
 source: ./src
 destination: ./build
@@ -12,13 +12,13 @@ color_scheme: oxlip
 
 aux_links:
   "OAL on GitHub":
-    - "//github.com/ebastien/openapi-lang"
+    - "//github.com/oxlip-lang/oal"
 
 aux_links_new_tab: true
 
 nav_external_links:
   - title: OAL on GitHub
-    url: https://github.com/ebastien/openapi-lang
+    url: https://github.com/oxlip-lang/oal
 
 callouts:
   note:
