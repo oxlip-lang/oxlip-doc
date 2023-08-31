@@ -11,4 +11,5 @@ As an [Interface Description Language](https://en.wikipedia.org/wiki/Interface_d
 The motivation is to alleviate the pain of managing OpenAPI in JSON or YAML by hand and at scale.
 OAL defines algebraic abstractions over [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) concepts, not too dissimilar to [Sass/SCSS over CSS](https://sass-lang.com/).
 
-OpenAPI is the assembly language of REST API design and is better produced or consumed by machines than humans.
+There are pros and cons to both _API-design-first_ and OpenAPI generated from implementation.
+As OpenAPI is better produced or consumed by machines rather than humans, OAL tries to help _API-design-first_ teams with better tooling.

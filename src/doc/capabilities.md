@@ -6,10 +6,12 @@ nav_order: 2
 
 # Capabilities
 
-To address the challenges of handwriting OpenAPI definitions at scale, OAL offers three main capabilities:
+To address the challenges of handwriting OpenAPI and managing large definitions across multiple teams, OAL offers five main capabilities:
 
-- __modular__: project structure can be organized freely into folders and modules.
-- __composable__: REST concepts are mapped to types and operations, enabling the composition of low-level values (e.g. JSON properties) into higher-level entities (e.g. HTTP end-points) as language expressions.
-- __functional__: behavior can be encapsulated in functions and reused at will.
+- __human readable__: statement-based language to help with readability (e.g. for code reviews);
+- __declarative__: as with bare OpenAPI in either JSON or YAML. Not a general purpose language;
+- __modular__: project structure can be organized freely into folders and modules;
+- __composable__: REST concepts are mapped to types and operators, enabling the composition of low-level values (e.g. JSON properties) into higher-level entities (e.g. HTTP end-points) as language expressions;
+- __functional__: behavior can be encapsulated in functions, generalized and reused at will.
 
-OAL also enhances OpenAPI with support for [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS), even if this capability is still experimental.
+OAL also enhances OpenAPI with experimental support for [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS).

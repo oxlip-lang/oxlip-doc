@@ -5,6 +5,16 @@ nav_order: 6
 ---
 
 # Overview of the language
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ### Programs
 A program is a collection of statements.
@@ -13,7 +23,7 @@ There are three types of statements:
 - declarations (`let`)
 - resources (`res`)
 
-Statements only appear in the top-level scope of a program.
+Statements only appear in the top-level scope of a program and end with a `;`.
 
 ### Modules
 Modules are imported with the `use` keyword.
@@ -47,7 +57,7 @@ res /something?{ 'q! str } on get : <headers={ifnmatch}> -> respond @obj3;
 ```
 
 ### Annotations
-Expressions and declarations can be annotated to provide OpenAPI metadata, like `title`, `description`, `example`... etc.
+Expressions and declarations can be annotated to provide OpenAPI and JSON Schema metadata.
 
 Inline annotations immediately follow the expression they refer to and are enclosed with backticks:
 ```oal
@@ -62,6 +72,39 @@ let b  = str;
 ```
 
 The format of an annotation is an inline YAML object without enclosing braces.
+The supported annotation properties are:
+- All schema expressions:
+  - `description`
+  - `title`
+  - `required`
+  - `examples`
+- URI schema:
+  - `example` (default auto-generated)
+- Integer and number schema:
+  - `minimum`
+  - `maximum`
+  - `multipleOf`
+  - `example`
+- String schema:
+  - `pattern`
+  - `enum`
+  - `format`
+  - `example`
+  - `minLength`
+  - `maxLength`
+- Content:
+  - `description`
+  - `examples`
+- Property:
+  - `description`
+  - `required` (_deprecated_)
+- Transfer (a.k.a operation):
+  - `description`
+  - `summary`
+  - `tags`
+  - `operationId` (default auto-generated)
+
+Please refer to the [OpenAPI specification](https://spec.openapis.org/oas/v3.0.3#properties) for a detailed description.
 
 ### Types
 Types are inferred for all expressions and are not part of the syntax. Error messages may refer to them when inference fails due to types mismatch.
@@ -79,7 +122,6 @@ The supported types are:
 - `Any`, the catch-all schema type;
 - `Property<T>`, the property type, parameterized with the type `T` of the inner schema;
 - `Func<[B], R>`, the function type, parameterized with the parameter types `[B]`, and returned type `R`.
-
 
 ### Primitives
 Primitive schema types are defined with the corresponding keyword:
@@ -197,13 +239,20 @@ let op2 = get { 'q str } -> cnt1;
 ```
 
 ### Relations
-A relation is a URI combined with one or more operations.
+A relation is a URI combined with one or more operations that are supported by this HTTP end-point.
 It corresponds to a pair of _path_ and _path item_ in OpenAPI.
 Exporting a relation with the `res` keyword promotes it to a _resource_.
 
 ```oal
 let rel1 = uri1 on op1, op2;
 ```
+
+A relation can be used as a schema expression to constrain the set of valid operations on a URI schema.
+Across a domain, this effectively defines the graph of possible state transitions between resources in a [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS) system.
+
+{: .note }
+There is no _relation_ schema in OpenAPI. When used as a schema, only the URI part of a relation is preserved.
+Next to OpenAPI, OAL is experimenting with complementary formats to retain the state transition information in the compiler output.
 
 ### Schema operators
 A conjunction of schemas is expressed with the `&` operator.
@@ -213,7 +262,7 @@ It corresponds to the _allOf_ combination in OpenAPI. Both schemas must be of th
 let @obj2 = @obj1 & { prop3 };
 ```
 
-A disjunction or schemas is expressed with the `|` operator.
+A disjunction of schemas is expressed with the `|` operator.
 It corresponds to the _oneOf_ combination in OpenAPI. Both schemas must be of the same type.
 
 ```oal
