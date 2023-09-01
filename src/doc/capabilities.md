@@ -6,7 +6,7 @@ nav_order: 2
 
 # Capabilities
 
-To address the challenges of handwriting OpenAPI and managing large definitions across multiple teams, OAL offers five main capabilities:
+To address the challenges of handwriting OpenAPI and managing large definitions across multiple teams, OAL offers the following capabilities:
 
 - __human readable__: statement-based language to help with readability (e.g. for code reviews);
 - __declarative__: as with bare OpenAPI in either JSON or YAML. Not a general purpose language;
