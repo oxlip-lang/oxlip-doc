@@ -7,7 +7,7 @@ nav_order: 3
 # Installation
 
 {: .note }
-Installation requires a [local Rust and Cargo installation](https://doc.rust-lang.org/cargo/getting-started/installation.html).
+This step requires a [local Rust and Cargo installation](https://doc.rust-lang.org/cargo/getting-started/installation.html).
 
 Checkout the code from the [Git repository](https://github.com/oxlip-lang/oal) and run:
 
@@ -15,4 +15,4 @@ Checkout the code from the [Git repository](https://github.com/oxlip-lang/oal) a
 cargo install --path oal-client
 ```
 
-A [VSCode language extension](https://github.com/oxlip-lang/oal-vscode) is also available for syntax highlighting and IDE integration.
+A [VSCode language extension](https://marketplace.visualstudio.com/items?itemName=e7bastien.oxlip-lang) is also available for syntax highlighting and IDE integration.
