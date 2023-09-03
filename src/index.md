@@ -13,3 +13,7 @@ OAL defines algebraic abstractions over [REST](https://en.wikipedia.org/wiki/Rep
 
 There are pros and cons to both _API-design-first_ and OpenAPI generated from implementation.
 As OpenAPI is better produced or consumed by machines rather than humans, OAL tries to help _API-design-first_ teams with better tooling.
+
+---
+
+[Next > Capabilities]({% link doc/capabilities.md %})

@@ -46,3 +46,7 @@ paths:
                       type: string
 components: {}
 ```
+
+---
+
+[Next > Language overview]({% link doc/overview.md %})

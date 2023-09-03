@@ -39,3 +39,7 @@ dedicated to the composition of low-level REST concepts into modular OpenAPI def
 One can argue that extensible languages like Dhall could achieve similar objectives.
 As a specialized language, OAL has the potential to provide a more compact syntax,
 easier to learn, to read and to manage at scale.
+
+---
+
+[Next > Examples]({% link doc/examples.md %})

@@ -26,3 +26,8 @@ callouts:
     color: blue
 
 favicon_ico: "/assets/images/favicon.png"
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+footer_content: 'Copyright &copy; 2023 Emmanuel Bastien. Distributed by an <a href="https://raw.githubusercontent.com/oxlip-lang/oxlip-doc/main/LICENSE.txt">Apache 2.0 license.</a>'

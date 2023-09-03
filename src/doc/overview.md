@@ -329,3 +329,7 @@ As functions cannot be recursive, occasionally it is necessary to use the explic
 ```oal
 let person n = rec x { 'name n, 'children [x] };
 ```
+
+---
+
+[Next > Design decisions]({% link doc/design.md %})

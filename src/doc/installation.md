@@ -15,4 +15,8 @@ Checkout the code from the [Git repository](https://github.com/oxlip-lang/oal) a
 cargo install --path oal-client
 ```
 
-A [VSCode language extension](https://marketplace.visualstudio.com/items?itemName=e7bastien.oxlip-lang) is also available for syntax highlighting and IDE integration.
+An experimental [VSCode language extension](https://marketplace.visualstudio.com/items?itemName=e7bastien.oxlip-lang) is also available for syntax highlighting and IDE integration.
+
+---
+
+[Next > Usage]({% link doc/usage.md %})

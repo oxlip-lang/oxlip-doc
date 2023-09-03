@@ -35,3 +35,7 @@ target = "openapi.yaml"
 ## LSP server
 The `oal-lsp` binary is the LSP server for integration with Visual Studio Code.
 The installation path to the `oal-lsp` binary must be given to the [VSCode language extension](https://marketplace.visualstudio.com/items?itemName=e7bastien.oxlip-lang).
+
+---
+
+[Next > Hello World]({% link doc/hello.md %})

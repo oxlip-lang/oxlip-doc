@@ -15,3 +15,7 @@ To address the challenges of handwriting OpenAPI and managing large definitions 
 - __functional__: behavior can be encapsulated in functions, generalized and reused at will.
 
 OAL also enhances OpenAPI with experimental support for [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS).
+
+---
+
+[Next > Installation]({% link doc/installation.md %})
