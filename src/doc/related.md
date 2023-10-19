@@ -6,15 +6,15 @@ nav_order: 8
 
 # Related work and comparison with OAL
 
-## [Cadl](https://github.com/microsoft/cadl) / [Smithy IDL](https://github.com/awslabs/smithy)
+## [TypeSpec](https://github.com/microsoft/typespec) / [Smithy IDL](https://github.com/awslabs/smithy)
 
-Arguably, Cadl and Smithy provide an opinionated service interface abstraction
+Arguably, TypeSpec and Smithy provide an opinionated service interface abstraction
 that happens to compile down to an OpenAPI definition.
 As they take on a broader scope than REST APIs (e.g. GraphQL, gRPC),
 it is not their objective to behave as a preprocessor and to offer feature parity with OpenAPI.
-The language design philosophy for both Cald and Smithy looks similar and
+The language design philosophy for both TypeSpec and Smithy looks similar and
 influenced by familiar object-oriented and general purpose languages.
-Cadl's support for parameterized data types (aka. templates) makes it more programmable than Smithy.
+TypeSpec's support for parameterized data types (aka. templates) makes it more programmable than Smithy.
 
 ## [KCL](https://github.com/KusionStack/KCLVM) / [CUE](https://github.com/cue-lang/cue) / [Dhall](https://github.com/dhall-lang/dhall-lang)
 
