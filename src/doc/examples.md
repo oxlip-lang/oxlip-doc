@@ -62,22 +62,17 @@ let ok u s = <status=200, headers={ 'Location u }, s> `description: OK`;
 let conflict u s = <status=409, headers={ 'Location u }, s> `description: Conflict`;
 
 # title: order resource representation
-let resOrder = {
-    'order! @order
-} & {
+let resOrder = @order & {
     'payment relPayment,
     'edit relOrder,
 };
-
-# title: payment resource representation
-let resPayment = { 'payment! @payment };
 
 # title: order relation
 let relOrder = uriOrder on
     # description: Update an order
     (
-        put : { 'order! @order } -> ok relOrder resOrder
-                                 :: conflict relOrder resOrder
+        put : { 'order! @order } -> ok relOrder { 'order! resOrder }
+                                 :: conflict relOrder { 'order! resOrder }
     ),
     # description: Delete an order
     (
@@ -88,7 +83,7 @@ let relOrder = uriOrder on
 let relOrders = uriOrders on
     # description: Create an order
     (
-        post : { 'order! @order } -> created relOrder resOrder
+        post : { 'order! @order } -> created relOrder { 'order! resOrder }
     ),
     # description: Retrieve all orders
     (
@@ -99,11 +94,11 @@ let relOrders = uriOrders on
 let relPayment = uriPayment on
     # description: Make a payment
     (
-        put : { 'payment! @payment } -> created relPayment resPayment
+        put : { 'payment! @payment } -> created relPayment { 'payment! @payment }
     ),
     # description: Retrieve a payment
     (
-        get -> ok relPayment resPayment
+        get -> ok relPayment { 'payment! @payment }
     );
 
 // All exported relations
