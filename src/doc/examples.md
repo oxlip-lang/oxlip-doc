@@ -70,36 +70,24 @@ let resOrder = @order & {
 # title: order relation
 let relOrder = uriOrder on
     # description: Update an order
-    (
-        put : { 'order! @order } -> ok relOrder { 'order! resOrder }
-                                 :: conflict relOrder { 'order! resOrder }
-    ),
+    ( put : { 'order! @order } -> ok relOrder { 'order! resOrder }
+                               :: conflict relOrder { 'order! resOrder } ),
     # description: Delete an order
-    (
-        delete -> <status=200> `description: Deleted`
-    );
+    ( delete -> <status=200> `description: Deleted` );
 
 # title: orders collection relation
 let relOrders = uriOrders on
     # description: Create an order
-    (
-        post : { 'order! @order } -> created relOrder { 'order! resOrder }
-    ),
+    ( post : { 'order! @order } -> created relOrder { 'order! resOrder } ),
     # description: Retrieve all orders
-    (
-        get -> ok relOrders { 'orders! [resOrder] }
-    );
+    ( get -> ok relOrders { 'orders! [resOrder] } );
 
 # title: payment relation
 let relPayment = uriPayment on
     # description: Make a payment
-    (
-        put : { 'payment! @payment } -> created relPayment { 'payment! @payment }
-    ),
+    ( put : { 'payment! @payment } -> created relPayment { 'payment! @payment } ),
     # description: Retrieve a payment
-    (
-        get -> ok relPayment { 'payment! @payment }
-    );
+    ( get -> ok relPayment { 'payment! @payment } );
 
 // All exported relations
 res relOrders;
