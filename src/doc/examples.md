@@ -97,4 +97,4 @@ res relPayment;
 
 ---
 
-[Next > OAL on Github](https://github.com/oxlip-lang/oal)
+[Next > Playground](https://oxlip-lang.github.io/oxlip-playground)
