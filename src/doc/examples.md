@@ -61,8 +61,8 @@ let created u s = <status=201, headers={ 'Location u }, s> `description: Created
 let ok u s = <status=200, headers={ 'Location u }, s> `description: OK`;
 let conflict u s = <status=409, headers={ 'Location u }, s> `description: Conflict`;
 
-# title: order resource representation
-let resOrder = @order & {
+# title: order state representation
+let orderState = @order & {
     'payment relPayment,
     'edit relOrder,
 };
@@ -70,17 +70,17 @@ let resOrder = @order & {
 # title: order relation
 let relOrder = uriOrder on
     # description: Update an order
-    ( put : { 'order! @order } -> ok relOrder { 'order! resOrder }
-                               :: conflict relOrder { 'order! resOrder } ),
+    ( put : { 'order! @order } -> ok relOrder { 'order! orderState }
+                               :: conflict relOrder { 'order! orderState } ),
     # description: Delete an order
     ( delete -> <status=200> `description: Deleted` );
 
 # title: orders collection relation
 let relOrders = uriOrders on
     # description: Create an order
-    ( post : { 'order! @order } -> created relOrder { 'order! resOrder } ),
+    ( post : { 'order! @order } -> created relOrder { 'order! orderState } ),
     # description: Retrieve all orders
-    ( get -> ok relOrders { 'orders! [resOrder] } );
+    ( get -> ok relOrders { 'orders! [orderState] } );
 
 # title: payment relation
 let relPayment = uriPayment on
