@@ -8,7 +8,7 @@ nav_order: 4
 The `oal-client` crate contains two binaries, the command line interface and the LSP server.
 
 ## Command line interface
-The `oal-cli` binary is the command line interface to the OAL compiler.
+The `oal-cli` binary is the command line interface to the Oxlip compiler.
 
 ```
     oal-cli [OPTIONS]

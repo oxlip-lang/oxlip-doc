@@ -12,7 +12,7 @@ The compiled OpenAPI definition is available in [Redoc](https://redocly.github.i
 
 ```oal
 /*
- * Example of OAL definition for the Restbucks imaginary coffee shop
+ * Example of Oxlip definition for the Restbucks imaginary coffee shop
  * https://www.infoq.com/articles/webber-rest-workflow/
  */
 

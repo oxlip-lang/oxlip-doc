@@ -252,7 +252,7 @@ Across a domain, this effectively defines the graph of possible state transition
 
 {: .note }
 There is no _relation_ schema in OpenAPI. When used as a schema, only the URI part of a relation is preserved.
-Next to OpenAPI, OAL is experimenting with complementary formats to retain the state transition information in the compiler output.
+Next to OpenAPI, Oxlip is experimenting with complementary formats to retain the state transition information in the compiler output.
 
 ### Schema operators
 A conjunction of schemas is expressed with the `&` operator.

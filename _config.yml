@@ -11,9 +11,9 @@ theme: just-the-docs
 color_scheme: oxlip
 
 aux_links:
-  "OAL playground":
+  "Oxlip playground":
     - "https://oxlip-lang.github.io/oxlip-playground"
-  "OAL on GitHub":
+  "Oxlip on GitHub":
     - "https://github.com/oxlip-lang/oal"
 
 aux_links_new_tab: true
@@ -21,7 +21,7 @@ aux_links_new_tab: true
 nav_external_links:
   - title: Playground
     url: https://oxlip-lang.github.io/oxlip-playground
-  - title: OAL on GitHub
+  - title: Oxlip on GitHub
     url: https://github.com/oxlip-lang/oal
 
 callouts:

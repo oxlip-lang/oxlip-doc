@@ -12,7 +12,7 @@ Copy and paste the following line into a file named `hello.oal`:
 res /hello on get -> { 'greetings [str] };
 ```
 
-Run the OAL compiler:
+Run the Oxlip compiler:
 
 ```
 oal-cli -m ./hello.oal -t hello.yaml

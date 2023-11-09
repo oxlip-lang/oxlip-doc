@@ -4,7 +4,7 @@ title: "Related work"
 nav_order: 8
 ---
 
-# Related work and comparison with OAL
+# Related work and comparison with Oxlip
 
 ## [TypeSpec](https://github.com/microsoft/typespec) / [Smithy IDL](https://github.com/awslabs/smithy)
 
@@ -34,10 +34,10 @@ _(TBD)_
 
 ## [Oxlip API Language](https://doc.oxlip-lang.org)
 
-OAL takes a different approach by defining an algebra and a functional evaluation strategy
+Oxlip takes a different approach by defining an algebra and a functional evaluation strategy
 dedicated to the composition of low-level REST concepts into modular OpenAPI definitions.
 One can argue that extensible languages like Dhall could achieve similar objectives.
-As a specialized language, OAL has the potential to provide a more compact syntax,
+As a specialized language, Oxlip has the potential to provide a more compact syntax,
 easier to learn, to read and to manage at scale.
 
 ---
